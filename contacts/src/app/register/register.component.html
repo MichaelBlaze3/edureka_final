@@ -1,0 +1,40 @@
+<div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
+
+<h1>Register</h1>
+<form #registerForm="ngForm" (submit)="register()" novalidate>
+  <div class="input-group input-group-full-size">
+
+    <div class="input-group input-group-lg input-group-full-size">
+      <input type="text" class="form-control" placeholder="First Name" [(ngModel)]='registerUser.name' name="name" aria-describedby="sizing-addon1" required>
+    </div>
+
+    <div class="input-group input-group-lg input-group-full-size">
+      <input type="text" class="form-control" placeholder="Last Name" [(ngModel)]='registerUser.lname' name="lname" aria-describedby="sizing-addon1" required>
+    </div>
+
+    <div class="input-group input-group-lg input-group-full-size">
+      <input type="text" class="form-control" placeholder="Phone" [(ngModel)]='registerUser.phone' name="phone" aria-describedby="sizing-addon1" required>
+    </div>
+
+    <div class="input-group input-group-lg input-group-full-size">
+      <input type="text" class="form-control" placeholder="Email" [(ngModel)]='registerUser.email' name="email" aria-describedby="sizing-addon1" required>
+    </div>
+
+    <div class="input-group input-group-lg input-group-full-size">
+      <input type="text" class="form-control" placeholder="Username" [(ngModel)]='registerUser.username' name="username" aria-describedby="sizing-addon1" required>
+    </div>
+
+    <div class="input-group input-group-lg input-group-full-size">
+      <input type="password" class="form-control" placeholder="Password" [(ngModel)]='registerUser.password' name="password" aria-describedby="sizing-addon1" required>
+    </div>
+
+    <div class="input-group input-group-lg input-group-full-size">
+      <input type="text" class="form-control" placeholder="User" [(ngModel)]='registerUser.role' name="role" aria-describedby="sizing-addon1">
+    </div>
+
+
+    <button type="submit" class="btn btn-info" [disabled]="!registerForm.valid">Register</button>
+
+  </div>
+</form>
+</div>

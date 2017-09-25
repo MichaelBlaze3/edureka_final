@@ -1,0 +1,11 @@
+/* You can add global styles to this file, and also import other style files */
+/* 
+ *  Adding margin - padding to the login and register  sections  
+ */
+
+ .input-group {
+    margin-bottom: 10px;
+}
+.input-group-full-size{
+    width: 100%;
+}
