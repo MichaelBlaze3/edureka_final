@@ -1,11 +1,60 @@
 /* You can add global styles to this file, and also import other style files */
-/* 
- *  Adding margin - padding to the login and register  sections  
- */
+html,
+body {
+    height: 100%;
+}
 
- .input-group {
+.input-group {
     margin-bottom: 10px;
 }
 .input-group-full-size{
     width: 100%;
+}
+
+/* Custome Login and Register Form Styles */
+
+div.formSpacing {
+    margin-top: 100px;
+}
+div.formSpacingSmall {
+    margin-top: 15px;
+}
+
+h1.customeStyleHeader,
+p.customeStyleText {
+    color: #fff;
+}
+
+p.customeStyleText {
+    padding-top: 10px;
+}
+
+
+.customeStyleForm {
+    padding: 10px;
+    border: 2px solid #fff;
+    border-radius: 10px;
+}
+.customeStyleInput {
+    background-color: transparent;
+    border: 2px solid #fff;
+    border-radius: 10px !important;
+    color: #ffffff;
+}
+.customeStyleInput::-webkit-input-placeholder {
+    color:#E1DEDE;
+}
+.customeStyleInput:-moz-placeholder {
+    color:#E1DEDE;
+}
+
+.customeStyleSubmit {
+    color: #fff;
+    background-color: transparent;
+    border-color: #ffffff;
+    border: 2px solid #ffffff;
+    border-radius: 10px !important;
+}
+.noPadding {
+    padding: 0;
 }

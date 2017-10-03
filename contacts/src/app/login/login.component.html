@@ -1,17 +1,22 @@
-<div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
-  <h1>Login</h1>
+<div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 formSpacing noPadding">
+  <h1 class="customeStyleHeader">Login</h1>
 
-  <form>
+  <form #loginForm="ngForm" class="customeStyleForm" (submit)="login()" novalidate>
     <div class="input-group input-group-full-size">
       <div class="input-group input-group-lg input-group-full-size">
-        <input type="text" class="form-control" placeholder="Username" aria-describedby="sizing-addon1">
+        <input type="text" class="form-control customeStyleInput" placeholder="Username" aria-describedby="sizing-addon1" [(ngModel)] = "credentials.username" name="username">
       </div>
 
       <div class="input-group input-group-lg input-group-full-size">
-        <input type="password" class="form-control" placeholder="Password" aria-describedby="sizing-addon1">
+        <input type="password" class="form-control customeStyleInput" placeholder="Password" aria-describedby="sizing-addon1" [(ngModel)] = "credentials.password" name="password">
       </div>
 
-      <button type="button" class="btn btn-info">Login</button>
+      <button type="submit" class="btn btn-info customeStyleSubmit" [disabled]="!loginForm.valid">Login</button>
     </div>
   </form>
+
+  <div class="customeStyleForm formSpacingSmall">
+    <p class="customeStyleText">If you don't have an Account, please <strong><a routerLink="/access/register">Register</a></strong></p>
+  </div>
+
 </div>

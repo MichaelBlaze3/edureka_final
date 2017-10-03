@@ -1,40 +1,52 @@
-<div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
+<div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 formSpacing noPadding">
 
-<h1>Register</h1>
-<form #registerForm="ngForm" (submit)="register()" novalidate>
-  <div class="input-group input-group-full-size">
+  <h1 class="customeStyleHeader">Register</h1>
+  <form #registerForm="ngForm" class="customeStyleForm" (submit)="register()" novalidate>
+    <div class="input-group input-group-full-size">
 
-    <div class="input-group input-group-lg input-group-full-size">
-      <input type="text" class="form-control" placeholder="First Name" [(ngModel)]='registerUser.name' name="name" aria-describedby="sizing-addon1" required>
+      <div class="input-group input-group-lg input-group-full-size">
+        <input type="text" class="form-control customeStyleInput" placeholder="First Name" [(ngModel)]='registerUser.name' name="name"
+          aria-describedby="sizing-addon1" required>
+      </div>
+
+      <div class="input-group input-group-lg input-group-full-size">
+        <input type="text" class="form-control customeStyleInput" placeholder="Last Name" [(ngModel)]='registerUser.lname' name="lname"
+          aria-describedby="sizing-addon1" required>
+      </div>
+
+      <div class="input-group input-group-lg input-group-full-size">
+        <input type="text" class="form-control customeStyleInput" placeholder="Phone" [(ngModel)]='registerUser.phone' name="phone"
+          aria-describedby="sizing-addon1" required>
+      </div>
+
+      <div class="input-group input-group-lg input-group-full-size">
+        <input type="text" class="form-control customeStyleInput" placeholder="Email" [(ngModel)]='registerUser.email' name="email"
+          aria-describedby="sizing-addon1" required>
+      </div>
+
+      <div class="input-group input-group-lg input-group-full-size">
+        <input type="text" class="form-control customeStyleInput" placeholder="Username" [(ngModel)]='registerUser.username' name="username"
+          aria-describedby="sizing-addon1" required>
+      </div>
+
+      <div class="input-group input-group-lg input-group-full-size">
+        <input type="password" class="form-control customeStyleInput" placeholder="Password" [(ngModel)]='registerUser.password'
+          name="password" aria-describedby="sizing-addon1" required>
+      </div>
+
+      <!-- <div class="input-group input-group-lg input-group-full-size">
+        <input type="text" class="form-control customeStyleInput" placeholder="User" [(ngModel)]='registerUser.role' name="role"
+          aria-describedby="sizing-addon1">
+      </div> -->
+
+
+      <button type="submit" class="btn btn-info customeStyleSubmit" [disabled]="!registerForm.valid">Register</button>
+
     </div>
+  </form>
 
-    <div class="input-group input-group-lg input-group-full-size">
-      <input type="text" class="form-control" placeholder="Last Name" [(ngModel)]='registerUser.lname' name="lname" aria-describedby="sizing-addon1" required>
-    </div>
-
-    <div class="input-group input-group-lg input-group-full-size">
-      <input type="text" class="form-control" placeholder="Phone" [(ngModel)]='registerUser.phone' name="phone" aria-describedby="sizing-addon1" required>
-    </div>
-
-    <div class="input-group input-group-lg input-group-full-size">
-      <input type="text" class="form-control" placeholder="Email" [(ngModel)]='registerUser.email' name="email" aria-describedby="sizing-addon1" required>
-    </div>
-
-    <div class="input-group input-group-lg input-group-full-size">
-      <input type="text" class="form-control" placeholder="Username" [(ngModel)]='registerUser.username' name="username" aria-describedby="sizing-addon1" required>
-    </div>
-
-    <div class="input-group input-group-lg input-group-full-size">
-      <input type="password" class="form-control" placeholder="Password" [(ngModel)]='registerUser.password' name="password" aria-describedby="sizing-addon1" required>
-    </div>
-
-    <div class="input-group input-group-lg input-group-full-size">
-      <input type="text" class="form-control" placeholder="User" [(ngModel)]='registerUser.role' name="role" aria-describedby="sizing-addon1">
-    </div>
-
-
-    <button type="submit" class="btn btn-info" [disabled]="!registerForm.valid">Register</button>
-
+  <div class="customeStyleForm formSpacingSmall">
+    <p class="customeStyleText">If you already have an Account, please <strong><a routerLink="/access/login">Login</a></strong></p>
   </div>
-</form>
+
 </div>

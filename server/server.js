@@ -30,6 +30,16 @@ app.get('/getUser', function (req, res) {
     });
 });
 
+app.get('/login', function(req, res){
+    console.log(req.query);
+    Users.find({"username": req.query.username, "password": req.query.password}, function(err, feed){
+        if(err){
+            console.log(err);
+        }
+        res.json(feed);
+    });
+});
+
 app.get('/getUsers', function (req, res) {
     Users.find(function (err, users) {
         res.send(users);
@@ -40,7 +50,7 @@ app.post('/addUser', function (req, res) {
     var user = new Users({
         name: req.body.name,
         lname: req.body.lname,
-        role: req.body.role,
+        role: 'user',
         phone: req.body.phone,
         email: req.body.email,
         username: req.body.username,
