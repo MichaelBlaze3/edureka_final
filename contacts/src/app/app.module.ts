@@ -4,21 +4,13 @@ import { RoutingModule, routingComponents } from './shareModules/routing/routing
 import { ShareModule } from './shareModules/share/share.module';
 
 import { AppComponent } from './app.component';
-import { LoginComponent } from './login/login.component';
-import { RegisterComponent } from './register/register.component';
-import { AccessComponent } from './access/access.component';
-import { DashboardComponent } from './dashboard/dashboard.component';
-import { UsersComponent } from './users/users.component';
-import { ContactsComponent } from './contacts/contacts.component';
-
+// import { SidebarComponent } from './common/sidebar/sidebar.component';
 
 @NgModule({
   declarations: [
     AppComponent,
-    routingComponents,
-    DashboardComponent,
-    UsersComponent,
-    ContactsComponent
+    routingComponents, 
+    // SidebarComponent
   ],
   imports: [
     BrowserModule,

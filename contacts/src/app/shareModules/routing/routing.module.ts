@@ -29,7 +29,8 @@ const appRoutes: Routes = [
         path: 'contacts', component: ContactsComponent
       }
     ]
-  }
+  },
+  { path: '**', redirectTo: 'access/login'}
 ];
 
 @NgModule({
@@ -42,4 +43,4 @@ const appRoutes: Routes = [
 })
 export class RoutingModule { }
 
-export const routingComponents = [AccessComponent, LoginComponent, RegisterComponent, DashboardComponent];
+export const routingComponents = [AccessComponent, LoginComponent, RegisterComponent, UsersComponent, DashboardComponent, ContactsComponent];

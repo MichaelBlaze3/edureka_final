@@ -36,7 +36,7 @@ app.get('/login', function(req, res){
         if(err){
             console.log(err);
         }
-        res.json(feed);
+        res.json(feed[0]);
     });
 });
 

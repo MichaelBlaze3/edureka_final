@@ -2,6 +2,7 @@ import { Component, OnInit } from '@angular/core';
 
 import { AccessService } from '../access/accessServices/access.service';
 
+
 export class loginCredentials {
   username: string;
   password: string;
@@ -10,8 +11,7 @@ export class loginCredentials {
 @Component({
   selector: 'app-login',
   templateUrl: './login.component.html',
-  styleUrls: ['./login.component.css'],
-  providers:[AccessService]
+  styleUrls: ['./login.component.css']
 })
 export class LoginComponent implements OnInit {
 

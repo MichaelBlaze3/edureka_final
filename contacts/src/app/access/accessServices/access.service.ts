@@ -21,11 +21,17 @@ export class AccessService {
   parameters = new HttpParams();
 
   loginUser(param){
-    console.log(param);
+    // console.log(param);
     this.parameters = this.parameters.append('username', param.username);
     this.parameters = this.parameters.append('password', param.password);
     this.http.get('http://localhost:3000/login', {params: this.parameters}).subscribe(
-      (data) => this.redirect(),
+      (data) => { 
+        // console.log(data[0]._id);
+        localStorage.setItem('user', data[0]);
+        this.redirect();  
+        console.log(data);
+
+      } ,
       (error) => console.log(error)
     );
   }
